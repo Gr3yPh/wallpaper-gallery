@@ -2,37 +2,40 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index of  / luotianyi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Index of luotianyi</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             margin: 0;
-            padding: 40px 20px;
-            font-family: 'Segoe UI', system-ui, sans-serif;
+            padding: 20px 10px; /* 移动端减小边距 */
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             background: url('/luotianyi/cloud-mirror.png') no-repeat center center fixed;
             background-size: cover;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
+            box-sizing: border-box;
         }
         .container {
             width: 100%;
             max-width: 900px;
-            background: rgba(255, 255, 255, 0.35);
-            backdrop-filter: blur(20px) saturate(160%);
-            -webkit-backdrop-filter: blur(20px) saturate(160%);
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(15px) saturate(160%);
+            -webkit-backdrop-filter: blur(15px) saturate(160%);
             border: 1px solid rgba(255, 255, 255, 0.4);
             border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            padding: 25px; /* 稍微缩小内边距 */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
         }
         h1 {
             color: #66CCFF;
-            font-weight: 300;
+            font-weight: 400;
+            font-size: 1.5rem; /* 适配小屏幕 */
             margin-top: 0;
-            border-bottom: 1px solid rgba(102, 204, 255, 0.3);
+            border-bottom: 2px solid rgba(102, 204, 255, 0.3);
             padding-bottom: 15px;
             word-break: break-all;
         }
@@ -40,84 +43,82 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            margin-bottom: 25px;
+            margin: 10px 0 20px 0;
             text-decoration: none;
             color: #444;
             font-weight: 600;
-            transition: color 0.3s;
+            padding: 8px 15px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 10px;
         }
-        .nav-link:hover { color: #66CCFF; }
-        
+
         ul { list-style: none; padding: 0; margin: 0; }
         li {
-            margin: 8px 0;
-            background: rgba(255, 255, 255, 0.4);
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.5);
             border-radius: 12px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid transparent;
-        }
-        li:hover {
-            transform: translateY(-2px);
-            background: rgba(255, 255, 255, 0.7);
-            border-color: #66CCFF;
-            box-shadow: 0 5px 15px rgba(102, 204, 255, 0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            overflow: hidden; /* 防止图片溢出 */
         }
         
+        /* 增加点击区域，适配手势操作 */
         a.item-link {
-            padding: 15px 20px;
+            padding: 15px;
             text-decoration: none;
             color: #333;
-            display: flex;
-            flex-direction: column;
+            display: block;
         }
+        
         .item-header {
             display: flex;
             align-items: center;
             gap: 12px;
-            font-size: 1.05rem;
+            font-size: 1rem;
+            line-height: 1.4;
         }
-        .fa-folder { color: #FFCA28; }
-        .fa-file-image { color: #66CCFF; }
-        .fa-file-alt { color: #999; }
-        
+
+        /* 预览图适配核心：宽度100%，高度自适应 */
         .preview-img {
             display: block;
-            max-width: 100%;
-            width: 320px;
+            width: 100%; 
+            max-width: 400px; /* PC端不至于太大 */
             height: auto;
-            margin-top: 15px;
-            border-radius: 10px;
-            border: 3px solid white;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-top: 12px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: #eee;
         }
-        
+
         footer {
-            margin-top: 40px;
+            margin-top: 30px;
             text-align: center;
             color: white;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-            font-size: 0.9rem;
-            line-height: 1.6;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 15px 30px;
-            border-radius: 50px;
-            backdrop-filter: blur(5px);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            font-size: 0.85rem;
+            padding: 15px;
+            width: 90%;
+            word-break: break-all;
         }
-        footer a { color: #66CCFF; text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
+
+        /* 移动端细调 */
+        @media (max-width: 600px) {
+            .container { padding: 15px; border-radius: 15px; }
+            h1 { font-size: 1.2rem; }
+            .preview-img { max-width: 100%; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1><i class="fas fa-layer-group"></i> Index of  / luotianyi</h1>
-        <a href="../" class="nav-link"><i class="fas fa-arrow-left"></i> 返回上级目录</a>
+        <h1><i class="fas fa-layer-group"></i> luotianyi</h1>
+        <a href="../" class="nav-link"><i class="fas fa-arrow-left"></i> 返回上级</a>
         <ul>
-            <li><a class="item-link" href="cloud-mirror.png"><div class="item-header"><i class="fas fa-file-image"></i> cloud-mirror.png</div><img src="cloud-mirror.png" class="preview-img" alt="cloud-mirror.png" loading="lazy"></a></li><li><a class="item-link" href="illust_141331370_20260218_205024.jpg"><div class="item-header"><i class="fas fa-file-image"></i> illust_141331370_20260218_205024.jpg</div><img src="illust_141331370_20260218_205024.jpg" class="preview-img" alt="illust_141331370_20260218_205024.jpg" loading="lazy"></a></li><li><a class="item-link" href="luo-tianyi-v4.jpg"><div class="item-header"><i class="fas fa-file-image"></i> luo-tianyi-v4.jpg</div><img src="luo-tianyi-v4.jpg" class="preview-img" alt="luo-tianyi-v4.jpg" loading="lazy"></a></li><li><a class="item-link" href="luotianyi-12th-byTID.jpg"><div class="item-header"><i class="fas fa-file-image"></i> luotianyi-12th-byTID.jpg</div><img src="luotianyi-12th-byTID.jpg" class="preview-img" alt="luotianyi-12th-byTID.jpg" loading="lazy"></a></li><li><a class="item-link" href="pixivID_139285974.png"><div class="item-header"><i class="fas fa-file-image"></i> pixivID_139285974.png</div><img src="pixivID_139285974.png" class="preview-img" alt="pixivID_139285974.png" loading="lazy"></a></li><li><a class="item-link" href="songs-never-ends.jpg"><div class="item-header"><i class="fas fa-file-image"></i> songs-never-ends.jpg</div><img src="songs-never-ends.jpg" class="preview-img" alt="songs-never-ends.jpg" loading="lazy"></a></li><li><a class="item-link" href="vsinger-spring-festival.png"><div class="item-header"><i class="fas fa-file-image"></i> vsinger-spring-festival.png</div><img src="vsinger-spring-festival.png" class="preview-img" alt="vsinger-spring-festival.png" loading="lazy"></a></li><li><a class="item-link" href="%E6%9C%88%E6%B5%B8%E8%8A%B1%E6%A2%A2_pixivID_140755451.jpg"><div class="item-header"><i class="fas fa-file-image"></i> 月浸花梢_pixivID_140755451.jpg</div><img src="%E6%9C%88%E6%B5%B8%E8%8A%B1%E6%A2%A2_pixivID_140755451.jpg" class="preview-img" alt="月浸花梢_pixivID_140755451.jpg" loading="lazy"></a></li><li><a class="item-link" href="%E6%9C%88%E6%B5%B8%E8%8A%B1%E6%A2%A2_pixivID_140755451_AIEdited.png"><div class="item-header"><i class="fas fa-file-image"></i> 月浸花梢_pixivID_140755451_AIEdited.png</div><img src="%E6%9C%88%E6%B5%B8%E8%8A%B1%E6%A2%A2_pixivID_140755451_AIEdited.png" class="preview-img" alt="月浸花梢_pixivID_140755451_AIEdited.png" loading="lazy"></a></li><li><a class="item-link" href="%E6%B4%9B%E5%A4%A9%E4%BE%9D%E5%91%B3%E7%B3%AF%E9%A6%99%E6%9F%A0%E6%AA%AC%E8%8C%B6.jpg"><div class="item-header"><i class="fas fa-file-image"></i> 洛天依味糯香柠檬茶.jpg</div><img src="%E6%B4%9B%E5%A4%A9%E4%BE%9D%E5%91%B3%E7%B3%AF%E9%A6%99%E6%9F%A0%E6%AA%AC%E8%8C%B6.jpg" class="preview-img" alt="洛天依味糯香柠檬茶.jpg" loading="lazy"></a></li>
+            <li><a class="item-link" href="cloud-mirror.png"><div class="item-header"><i class="fas fa-file-image fa-fw"></i> cloud-mirror.png</div><img src="cloud-mirror.png" class="preview-img" alt="cloud-mirror.png" loading="lazy"></a></li><li><a class="item-link" href="illust_141331370_20260218_205024.jpg"><div class="item-header"><i class="fas fa-file-image fa-fw"></i> illust_141331370_20260218_205024.jpg</div><img src="illust_141331370_20260218_205024.jpg" class="preview-img" alt="illust_141331370_20260218_205024.jpg" loading="lazy"></a></li><li><a class="item-link" href="luo-tianyi-v4.jpg"><div class="item-header"><i class="fas fa-file-image fa-fw"></i> luo-tianyi-v4.jpg</div><img src="luo-tianyi-v4.jpg" class="preview-img" alt="luo-tianyi-v4.jpg" loading="lazy"></a></li><li><a class="item-link" href="luotianyi-12th-byTID.jpg"><div class="item-header"><i class="fas fa-file-image fa-fw"></i> luotianyi-12th-byTID.jpg</div><img src="luotianyi-12th-byTID.jpg" class="preview-img" alt="luotianyi-12th-byTID.jpg" loading="lazy"></a></li><li><a class="item-link" href="pixivID_139285974.png"><div class="item-header"><i class="fas fa-file-image fa-fw"></i> pixivID_139285974.png</div><img src="pixivID_139285974.png" class="preview-img" alt="pixivID_139285974.png" loading="lazy"></a></li><li><a class="item-link" href="songs-never-ends.jpg"><div class="item-header"><i class="fas fa-file-image fa-fw"></i> songs-never-ends.jpg</div><img src="songs-never-ends.jpg" class="preview-img" alt="songs-never-ends.jpg" loading="lazy"></a></li><li><a class="item-link" href="vsinger-spring-festival.png"><div class="item-header"><i class="fas fa-file-image fa-fw"></i> vsinger-spring-festival.png</div><img src="vsinger-spring-festival.png" class="preview-img" alt="vsinger-spring-festival.png" loading="lazy"></a></li><li><a class="item-link" href="%E6%9C%88%E6%B5%B8%E8%8A%B1%E6%A2%A2_pixivID_140755451.jpg"><div class="item-header"><i class="fas fa-file-image fa-fw"></i> 月浸花梢_pixivID_140755451.jpg</div><img src="%E6%9C%88%E6%B5%B8%E8%8A%B1%E6%A2%A2_pixivID_140755451.jpg" class="preview-img" alt="月浸花梢_pixivID_140755451.jpg" loading="lazy"></a></li><li><a class="item-link" href="%E6%9C%88%E6%B5%B8%E8%8A%B1%E6%A2%A2_pixivID_140755451_AIEdited.png"><div class="item-header"><i class="fas fa-file-image fa-fw"></i> 月浸花梢_pixivID_140755451_AIEdited.png</div><img src="%E6%9C%88%E6%B5%B8%E8%8A%B1%E6%A2%A2_pixivID_140755451_AIEdited.png" class="preview-img" alt="月浸花梢_pixivID_140755451_AIEdited.png" loading="lazy"></a></li><li><a class="item-link" href="%E6%B4%9B%E5%A4%A9%E4%BE%9D%E5%91%B3%E7%B3%AF%E9%A6%99%E6%9F%A0%E6%AA%AC%E8%8C%B6.jpg"><div class="item-header"><i class="fas fa-file-image fa-fw"></i> 洛天依味糯香柠檬茶.jpg</div><img src="%E6%B4%9B%E5%A4%A9%E4%BE%9D%E5%91%B3%E7%B3%AF%E9%A6%99%E6%9F%A0%E6%AA%AC%E8%8C%B6.jpg" class="preview-img" alt="洛天依味糯香柠檬茶.jpg" loading="lazy"></a></li>
         </ul>
     </div>
     <footer>
         Copyright © 2026 魇珩Gr3yPh4ntom<br>
-        Repo Source: <a href="https://github.com/Gr3yPh/wallpaper-gallery" target="_blank">https://github.com/Gr3yPh/wallpaper-gallery</a>
+        Repo: <a href="https://github.com/Gr3yPh/wallpaper-gallery" target="_blank" style="color:#66CCFF">Source Code</a>
     </footer>
 </body>
 </html>
