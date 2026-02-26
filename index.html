@@ -8,7 +8,7 @@
     <style>
         body {
             margin: 0;
-            padding: 20px 10px; /* 移动端减小边距 */
+            padding: 20px 10px;
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             background: url('/luotianyi/cloud-mirror.png') no-repeat center center fixed;
             background-size: cover;
@@ -26,14 +26,14 @@
             -webkit-backdrop-filter: blur(15px) saturate(160%);
             border: 1px solid rgba(255, 255, 255, 0.4);
             border-radius: 20px;
-            padding: 25px; /* 稍微缩小内边距 */
+            padding: 25px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             box-sizing: border-box;
         }
         h1 {
             color: #66CCFF;
             font-weight: 400;
-            font-size: 1.5rem; /* 适配小屏幕 */
+            font-size: 1.5rem;
             margin-top: 0;
             border-bottom: 2px solid rgba(102, 204, 255, 0.3);
             padding-bottom: 15px;
@@ -51,24 +51,20 @@
             background: rgba(255,255,255,0.5);
             border-radius: 10px;
         }
-
         ul { list-style: none; padding: 0; margin: 0; }
         li {
             margin: 10px 0;
             background: rgba(255, 255, 255, 0.5);
             border-radius: 12px;
             border: 1px solid rgba(255,255,255,0.3);
-            overflow: hidden; /* 防止图片溢出 */
+            overflow: hidden;
         }
-        
-        /* 增加点击区域，适配手势操作 */
         a.item-link {
             padding: 15px;
             text-decoration: none;
             color: #333;
             display: block;
         }
-        
         .item-header {
             display: flex;
             align-items: center;
@@ -76,19 +72,16 @@
             font-size: 1rem;
             line-height: 1.4;
         }
-
-        /* 预览图适配核心：宽度100%，高度自适应 */
         .preview-img {
             display: block;
             width: 100%; 
-            max-width: 400px; /* PC端不至于太大 */
+            max-width: 400px;
             height: auto;
             margin-top: 12px;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             background: #eee;
         }
-
         footer {
             margin-top: 30px;
             text-align: center;
@@ -99,8 +92,6 @@
             width: 90%;
             word-break: break-all;
         }
-
-        /* 移动端细调 */
         @media (max-width: 600px) {
             .container { padding: 15px; border-radius: 15px; }
             h1 { font-size: 1.2rem; }
@@ -113,7 +104,7 @@
         <h1><i class="fas fa-layer-group"></i> 根目录</h1>
         
         <ul>
-            <li><a class="item-link" href=".git/"><div class="item-header"><i class="fas fa-folder fa-fw"></i> .git/</div></a></li><li><a class="item-link" href="endfield/"><div class="item-header"><i class="fas fa-folder fa-fw"></i> endfield/</div></a></li><li><a class="item-link" href="luotianyi/"><div class="item-header"><i class="fas fa-folder fa-fw"></i> luotianyi/</div></a></li><li><a class="item-link" href="video/"><div class="item-header"><i class="fas fa-folder fa-fw"></i> video/</div></a></li>
+            <li><a class="item-link" href="endfield/"><div class="item-header"><i class="fas fa-folder fa-fw"></i> endfield/</div></a></li><li><a class="item-link" href="luotianyi/"><div class="item-header"><i class="fas fa-folder fa-fw"></i> luotianyi/</div></a></li>
         </ul>
     </div>
     <footer>
