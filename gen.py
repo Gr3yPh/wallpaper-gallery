@@ -4,7 +4,7 @@ from datetime import datetime
 
 # ================= 配置常量 =================
 THEME_COLOR = "#66CCFF"
-BG_IMAGE_PATH = "/luotianyi/cloud-mirror.png"
+BG_IMAGE_PATH = "/luotianyi/luo-tianyi-12th-byTID.jpg"
 REPO_URL = "https://github.com/Gr3yPh/wallpaper-gallery"
 AUTHOR = "魇珩Gr3yPh4ntom"
 IMAGE_EXTENSIONS = {'.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'}
